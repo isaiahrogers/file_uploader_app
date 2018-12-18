@@ -1,1 +1,8 @@
 <h1><%= @current_user.name %></h1>
+  <div>
+    <%= link_to 'Upload new file(s)', new_user_upload_path(@current_user) %>
+  </div>
+
+  <div>
+    <%= link_to 'View my uploads', user_uploads_path(@current_user) %>
+  </div>

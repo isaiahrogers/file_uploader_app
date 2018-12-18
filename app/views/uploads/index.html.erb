@@ -1,0 +1,23 @@
+<h1>My Uploads:</h1>
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>Upload Name</th>
+        <th>User</th>
+        <th>Imported?</th>
+        <th>File(s)</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @uploads.each do |upload| %>
+        <tr>
+          <td><%= upload.name %></td>
+          <td><%= upload.user.name %></td>
+          <td><%= upload.imported %></td>
+          <td><%= upload.files.map { |f| f.filename.to_s } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<%= link_to 'My Profile', user_path(@current_user) %>

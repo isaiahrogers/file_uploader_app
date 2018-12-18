@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :users
+  root 'users#new'
+
+  resources :users do
+    resources :uploads
+  end
 
 end

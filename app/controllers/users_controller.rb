@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:notice] = 'New user created'
+      redirect_to user_path(@user)
     else
       flash[:notice] = 'Issue creating user'
       render 'new'

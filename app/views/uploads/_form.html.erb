@@ -1,0 +1,13 @@
+<%= form_for [@current_user, @upload] do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :files %>
+    <%= f.file_field :files, multiple: true %>
+  </div>
+
+  <%= f.submit 'Upload Files' %>
+<% end %>
