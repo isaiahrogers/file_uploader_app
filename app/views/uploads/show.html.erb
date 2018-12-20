@@ -1,0 +1,3 @@
+<% @current_upload.files.each do |f| %>
+  <%= link_to f.blob.filename, url_for(f) %>
+<% end %>  

@@ -1,4 +1,6 @@
-<%= form_for [@current_user, @upload] do |f| %>
+<h1>Edit Upload</h1>
+
+<%= form_for [@current_user, @current_upload] do |f| %>
   <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -10,9 +12,9 @@
   </div>
 
   <div class="field">
-    <%= f.label :files %>
-    <%= f.file_field :files, multiple: true %>
+    <%= f.label :imported? %>
+    <%= f.check_box :imported %>
   </div>
 
-  <%= f.submit 'Upload Files' %>
+  <%= f.submit 'Update' %>
 <% end %>
